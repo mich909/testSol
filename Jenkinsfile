@@ -32,7 +32,7 @@ pipeline {
         }
         stage('PushImage') {
             steps {
-                eho "push"
+                echo "push"
             }
         }
     }
