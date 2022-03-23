@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
        Main_env = "Welcome in the main branch"
-       DEPLOY_TO = "main environment"
+       python = "C:\\Users\\Student\\AppData\\Local\\Programs\\Python\\Python310\\python.exe"
     }
 
     stages {
