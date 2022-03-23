@@ -29,12 +29,15 @@ pipeline {
         stage('BuildImage') {
             steps {
                echo "build"
-               
+               bat "docker build -t \"JenkPipe:latest\" "
+               bat "docker run JenkPipe"
             }
         }
         stage('PushImage') {
             steps {
                 echo "push"
+                bat "docker tag JenkPipe mich909/Jenkins_multigti"
+                bat "docker push mich909/Jenkins_multigti"
             }
         }
     }
