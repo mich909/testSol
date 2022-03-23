@@ -1,20 +1,40 @@
 pipeline {
     agent any
+    environment {
+       Main_env = "Welcome in the main branch"
+       DEPLOY_TO = "main environment"
+    }
 
     stages {
-        stage('Build') {
+        stage('checkBranch') {
             steps {
-                echo 'Building..'
+                when {
+                        branch 'main'
+                    }
+                    steps{
+                        echo "${Main_env}"
+                    }
+
             }
         }
-        stage('Test') {
+        stage('TestCode') {
             steps {
-                echo 'Testing..'
+                
             }
         }
-        stage('Deploy') {
+        stage('RunCode') {
             steps {
-                echo 'Deploying....'
+                
+            }
+        }
+        stage('BuildImage') {
+            steps {
+               
+            }
+        }
+        stage('PushImage') {
+            steps {
+                
             }
         }
     }
