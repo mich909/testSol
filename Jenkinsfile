@@ -36,8 +36,8 @@ pipeline {
         stage('PushImage') {
             steps {
                 echo "push"
-                bat "docker tag jenk_pipe mich909/Jenkins_multigti"
-                bat "docker push mich909/Jenkins_multigti"
+                bat "docker tag jenk_pipe mich909/jenkins_multigti"
+                bat "docker push mich909/jenkins_multigti"
             }
         }
     }
