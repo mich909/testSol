@@ -19,22 +19,22 @@ pipeline {
         }
         stage('TestCode') {
             steps {
-                
+                echo "test"
             }
         }
         stage('RunCode') {
             steps {
-                
+                echo "run"
             }
         }
         stage('BuildImage') {
             steps {
-               
+               echo "build"
             }
         }
         stage('PushImage') {
             steps {
-                
+                eho "push"
             }
         }
     }
