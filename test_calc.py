@@ -5,4 +5,4 @@ def test_dec():
     assert calc.dec(3)==2
     
 def test_calc():
-    assert calc.inc(calc.dec(0)) == -1
+    assert calc.inc(calc.dec(0)) == 0
