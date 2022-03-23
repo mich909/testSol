@@ -23,11 +23,13 @@ pipeline {
         stage('RunCode') {
             steps {
                 echo "run"
+                bat "${python} main.py"
             }
         }
         stage('BuildImage') {
             steps {
                echo "build"
+               
             }
         }
         stage('PushImage') {
