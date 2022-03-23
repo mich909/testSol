@@ -3,3 +3,5 @@ def inc(x):
     return x + 1
 def dec(x):
     return x-1
+def test_calc(x):
+    assert inc(dec(0)) == 0
