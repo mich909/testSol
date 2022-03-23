@@ -29,7 +29,7 @@ pipeline {
         stage('BuildImage') {
             steps {
                echo "build"
-               bat "docker build -t \"jenk_pipe:latest\" "
+               bat "docker build -t \"jenk_pipe:latest\" ."
                bat "docker run jenk_pipe"
             }
         }
