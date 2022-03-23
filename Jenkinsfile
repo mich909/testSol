@@ -6,20 +6,18 @@ pipeline {
     }
 
     stages {
-        stage('checkBranch') {
+        stage('testScript') {
             steps {
-                when {
-                        branch 'main'
-                    }
-                    steps{
-                        echo "${Main_env}"
-                    }
-
+               script{
+                   def a = "test skryptu"
+                   println a
+               }
             }
         }
         stage('TestCode') {
             steps {
                 echo "test"
+                bat "pytest"
             }
         }
         stage('RunCode') {
